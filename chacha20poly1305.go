@@ -11,8 +11,8 @@ import (
 	"crypto/subtle"
 	"encoding/binary"
 
-	"github.com/aead/chacha20/chacha"
-	"github.com/aead/poly1305"
+	"github.com/jessywts/chacha20/chacha"
+	"github.com/jessywts/poly1305"
 )
 
 // KeySize is the size of the key used by this AEAD, in bytes.
