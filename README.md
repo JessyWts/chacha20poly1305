@@ -3,7 +3,7 @@
 This repository implements the ChaCha20Poly1305 AEAD construction. ChaCha20Pol1305 is combination
 of the [ChaCha20 stream cipher](https://github.com/aead/chacha20) and the [Poly1305 authenticator](https://github.com/aead/poly1305) and is standardized in [RFC 7539](https://tools.ietf.org/html/rfc7539).
 
-This repository also implements 8 and 24 byte variants additional to the IETF 12 byte version of ChaCha20Poly1305. Further this package provides a streaming API to wrap an [io.Writer](https://golang.org/pkg/io/#Writer) with an en/decrypting [io.WriteCloser](https://golang.org/pkg/io/#WriteCloser). 
+This repository also implements 8 and 24 byte variants additional to the IETF 12 byte version of ChaCha20Poly1305. Further this package provides a streaming API to wrap an [io.Writer](https://golang.org/pkg/io/#Writer) with an en/decrypting [io.WriteCloser](https://golang.org/pkg/io/#WriteCloser).
 
 ### Recommendations
 
@@ -12,7 +12,7 @@ This repository just provides additional functionality like 8 and 24 byte varian
 
 ### Install
 
-Install in your GOPATH: `go get -u github.com/aead/chacha20poly1305`  
+Install in your GOPATH: `go get -u github.com/jessywts/chacha20poly1305`  
 Please notice, that the amd64 AVX2 asm implementation requires go1.7 or newer.
 
 ### Performance
@@ -21,6 +21,7 @@ Please notice, that the amd64 AVX2 asm implementation requires go1.7 or newer.
 Hardware: Intel i7-6500U 2.50GHz x 2  
 System: Linux Ubuntu 16.04 - kernel: 4.8.0-54-generic  
 Go version: 1.8.1
+
 ```
 AVX2
 
@@ -51,7 +52,7 @@ Chacha20Poly1305Seal_8K-4   790MB/s ± 0%         3.02
 EncryptedWriter64-4         397MB/s ± 0%         6.01
 DecryptedWriter64-4         263MB/s ± 1%         9.07
 EncryptedWriter1K-4        1.10GB/s ± 1%         2.12
-DecryptedWriter1K-4        1.01GB/s ± 1%         2.31 
+DecryptedWriter1K-4        1.01GB/s ± 1%         2.31
 EncryptedWriter8K-4        1.18GB/s ± 0%         1.97
 DecryptedWriter8K-4        1.16GB/s ± 0%         2.01
 ```
